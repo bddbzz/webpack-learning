@@ -15,15 +15,18 @@ module.exports = {
         rules: [{
             test: /\.txt$/,
             use: 'raw-loader'
-        },{
+        }, {
             test: /\.js$/,
             use: 'babel-loader'
-        },{
+        }, {
             test: /\.css$/,
-            use: 'css-loader'
+            use: ['style-loader', 'css-loader']
+        }, {
+            test: /\.less$/,
+            use: ['style-loader', 'css-loader', 'less-loader']
         }]
     },
-    plugins:[
+    plugins: [
 
     ],
     mode: 'none'
