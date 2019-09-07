@@ -1,7 +1,0 @@
-@import "common.css" screen;
-@img-path: "/assets/img/";
-
-.search-text {
-    color: red;
-    background-image:url("@{img-path}/1.jpg")
-}

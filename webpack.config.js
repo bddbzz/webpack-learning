@@ -24,6 +24,17 @@ module.exports = {
         }, {
             test: /\.less$/,
             use: ['style-loader', 'css-loader', 'less-loader']
+        }, {
+            test: /\.(png|jpg|gif|jpeg|svg)$/,
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: 10240
+                }
+            }]
+        }, {
+            test: /\.(woff2|woff|eot|ttf|otf)$/,
+            use: 'file-loader'
         }]
     },
     plugins: [
