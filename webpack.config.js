@@ -1,6 +1,7 @@
 'use strict';
 
 let path = require('path')
+let webpack = require("webpack")
 
 module.exports = {
     entry: {
@@ -9,7 +10,8 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: '[name].js'
+        filename: '[name].js',
+        publicPath: "/dist/"
     },
     module: {
         rules: [{
@@ -29,7 +31,7 @@ module.exports = {
             use: [{
                 loader: 'url-loader',
                 options: {
-                    limit: 10240
+                    limit: 1024
                 }
             }]
         }, {
@@ -38,7 +40,17 @@ module.exports = {
         }]
     },
     plugins: [
-
+        new webpack.HotModuleReplacementPlugin()
     ],
-    mode: 'none'
+    mode: 'development',
+    devServer:{
+        contentBase: "./dist",
+        hot: true
+    },    
+/*     watch: true,
+    watchOptions: {
+        ignored: /node_modules/,
+        aggregateTimeout: 300,
+        poll: 1000
+    } */
 }
