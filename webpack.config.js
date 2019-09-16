@@ -3,7 +3,7 @@
 let path = require('path')
 let webpack = require("webpack")
 
-module.exports = {
+let baseWebpackConfig = {
     entry: {
         index: './src/index.js',
         search: './src/search.js'
@@ -11,7 +11,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].js',
-        publicPath: "/dist/"
+        publicPath: "/assets/"
     },
     module: {
         rules: [{
@@ -40,10 +40,10 @@ module.exports = {
         }]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
     ],
     mode: 'development',
-    devServer:{
+    /*devServer:{
         contentBase: "./dist",
         hot: true
     },    
@@ -54,3 +54,8 @@ module.exports = {
         poll: 1000
     } */
 }
+module.exports = baseWebpackConfig
+
+Object.keys(baseWebpackConfig.entry).forEach(function (name) {
+    baseWebpackConfig.entry[name] = ['./build/dev-client'].concat(baseWebpackConfig.entry[name])
+})

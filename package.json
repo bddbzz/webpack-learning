@@ -27,6 +27,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "eventsource-polyfill": "^0.9.6",
     "file-loader": "^4.2.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
@@ -36,6 +37,7 @@
     "url-loader": "^2.1.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.8.0",
+    "webpack-hot-middleware": "^2.25.0"
   }
 }
