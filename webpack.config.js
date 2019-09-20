@@ -6,7 +6,7 @@ let webpack = require("webpack")
 let baseWebpackConfig = {
     entry: {
         index: './src/index.js',
-        search: './src/search.js'
+        search: ['webpack-hot-middleware/client?reload=true','./src/search.js']
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -55,7 +55,3 @@ let baseWebpackConfig = {
     } */
 }
 module.exports = baseWebpackConfig
-
-Object.keys(baseWebpackConfig.entry).forEach(function (name) {
-    baseWebpackConfig.entry[name] = ['./build/dev-client'].concat(baseWebpackConfig.entry[name])
-})
