@@ -1,16 +1,16 @@
 'use strict';
 
-let path = require('path')
-let webpack = require("webpack")
+const path = require('path')
+const webpack = require("webpack")
 
 let baseWebpackConfig = {
     entry: {
-        index: './src/index.js',
-        search: ['webpack-hot-middleware/client?reload=true','./src/search.js']
+        index: ['./src/index.js'],
+        search: ['./src/search.js'] //'webpack-hot-middleware/client?reload=true',
     },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: '[name].js',
+        filename: '[name]_[hash:8].js',
         publicPath: "/assets/"
     },
     module: {
@@ -40,10 +40,10 @@ let baseWebpackConfig = {
         }]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
+       new webpack.HotModuleReplacementPlugin(),
     ],
     mode: 'development',
-    /*devServer:{
+    devServer:{
         contentBase: "./dist",
         hot: true
     },    
