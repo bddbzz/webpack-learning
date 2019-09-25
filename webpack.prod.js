@@ -7,6 +7,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const glob = require('glob')
+const HTMLWebpackExternalsPlugin = require('html-webpack-externals-plugin')
 const setMPA = () => {
     let entry = {}
     let htmlWebpackPlugins = []
@@ -102,8 +103,23 @@ let baseWebpackConfig = {
             cssProcessor: require('cssnano')
         }),
         ...htmlWebpackPlugins,
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new HTMLWebpackExternalsPlugin({
+            externals: [
+                {
+                    module: 'react',
+                    entry: 'https://11.url.cn/now/lib/16.2.0/react.min.js',
+                    global: 'React',
+                },
+                {
+                    module: 'react-dom',
+                    entry: 'https://11.url.cn/now/lib/16.2.0/react-dom.min.js',
+                    global: 'ReactDOM',
+                },
+            ]
+        })
     ],
-    mode: 'production'
+    mode: 'production',
+    devtool: 'none'
 }
 module.exports = baseWebpackConfig
