@@ -1,11 +1,13 @@
 'use strict';
 
 const path = require('path')
-const webpack = require("webpack")
+const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const {
+    CleanWebpackPlugin
+} = require('clean-webpack-plugin')
 const glob = require('glob')
 const HTMLWebpackExternalsPlugin = require('html-webpack-externals-plugin')
 const setMPA = () => {
@@ -22,7 +24,7 @@ const setMPA = () => {
         htmlWebpackPlugins.push(new HTMLWebpackPlugin({
             template: path.resolve(__dirname, `src/${pageName}/index.html`),
             filename: `${pageName}.html`,
-            chunks: [pageName],
+            chunks: ['vendors', pageName],
             inject: true,
             minify: {
                 html5: true,
@@ -40,7 +42,10 @@ const setMPA = () => {
         htmlWebpackPlugins
     }
 }
-let { entry, htmlWebpackPlugins } = setMPA()
+let {
+    entry,
+    htmlWebpackPlugins
+} = setMPA()
 
 let baseWebpackConfig = {
     entry,
@@ -58,7 +63,7 @@ let baseWebpackConfig = {
             use: 'babel-loader'
         }, {
             test: /\.css$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader']//'style-loader'
+            use: [MiniCssExtractPlugin.loader, 'css-loader'] //'style-loader'
         }, {
             test: /\.less$/,
             use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader', {
@@ -74,7 +79,7 @@ let baseWebpackConfig = {
                     remUnit: 75,
                     remPrecision: 8
                 }
-            }]//'style-loader'
+            }] //'style-loader'
         }, {
             test: /\.(png|jpg|gif|jpeg|svg)$/,
             use: [{
@@ -104,6 +109,7 @@ let baseWebpackConfig = {
         }),
         ...htmlWebpackPlugins,
         new CleanWebpackPlugin(),
+        //new webpack.optimize.ModuleConcatenationPlugin()
         new HTMLWebpackExternalsPlugin({
             externals: [
                 {
@@ -119,7 +125,20 @@ let baseWebpackConfig = {
             ]
         })
     ],
-    mode: 'production',
-    devtool: 'none'
+    mode: 'none',
+    devtool: 'none',
+    optimization: {
+        /*splitChunks: {
+            minSize: 0,
+            cacheGroups: {
+                commons: {
+                    test: /(react|react\-dom)/,
+                    name: 'vendors',
+                    chunks: 'all',
+                    minChunks: 1
+                }
+            }
+        }*/
+    }
 }
 module.exports = baseWebpackConfig
