@@ -1,10 +1,3 @@
-import {
-    helloworld
-} from './helloworld'
-import {
-    a,
-    b
-} from '../../tree-shaking/index'
-document.write(helloworld()+a())
+import { helloworld } from './helloworld';
 
-
+document.write(helloworld());

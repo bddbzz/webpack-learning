@@ -1,0 +1,7 @@
+{
+    "eslint.autoFixOnSave": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.lintTask.enable": true,
+    "eslint.run": "onSave",
+    "workbench.settings.useSplitJSON": true
+}

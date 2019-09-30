@@ -10,15 +10,21 @@
     "dev": "webpack-dev-server --open --config webpack.dev.js"
   },
   "husky": {
-      "hooks": {
-          "pre-commit": "lint-staged"
-      }
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-      "linters": {
-          "**/*.js": ["eslint --fix", "git add"]
-      },
-      "ignore": ["**/{dist,build}/**/*.js", "**/*.min.js"]
+    "linters": {
+      "**/*.js": [
+        "eslint --fix",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "**/{dist,build}/**/*.js",
+      "**/*.min.js"
+    ]
   },
   "repository": {
     "type": "git",
@@ -46,6 +52,7 @@
     "ejs": "^2.7.1",
     "eslint": "^6.5.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-loader": "^3.0.2",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -61,6 +68,7 @@
     "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
+    "prettier-eslint": "^9.0.0",
     "px2rem-loader": "^0.1.9",
     "raw-loader": "^3.1.0",
     "react": "^16.9.0",
@@ -71,7 +79,8 @@
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0",
-    "webpack-hot-middleware": "^2.25.0"
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "lib-flexible": "^0.3.2"
