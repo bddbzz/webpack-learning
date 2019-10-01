@@ -1,11 +1,11 @@
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const path = require('path');
-const baseConfig = require('./webpack.base');
+const baseConfig = require('./webpack.app');
 
 const config = {
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '../dist'),
     filename: '[name]_[hash:8].js',
     publicPath: '',
   },
@@ -26,6 +26,7 @@ const config = {
   devServer: {
     contentBase: './dist',
     hot: true,
+    historyApiFallback: true,
   },
   /*     watch: true,
     watchOptions: {

@@ -1,13 +1,16 @@
 {
-  "name": "webpack-learning",
-  "version": "1.0.0",
-  "description": "",
-  "main": "webpack.config.js",
+  "name": "@monkeyzz/large-number",
+  "version": "1.0.2",
+  "description": "webpack learning",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.prod.js",
-    "watch": "webpack --watch --config webpack.prod.js",
-    "dev": "webpack-dev-server --open --config webpack.dev.js"
+    "build": "webpack --config build/webpack.prod.js",
+    "watch": "webpack --watch --config build/webpack.prod.js",
+    "dev": "webpack-dev-server --open --config build/webpack.dev.js",
+    "lib": "webpack --config build/webpack.lib.js",
+    "prepare": "webpack --config build/webpack.lib.js",
+    "lint": "eslint --ext .js --ext .jsx src"
   },
   "husky": {
     "hooks": {
@@ -31,8 +34,8 @@
     "url": "git+https://github.com/bddbzz/webpack-learning.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "MonkeyZz",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bddbzz/webpack-learning/issues"
   },
@@ -54,6 +57,7 @@
     "eslint-config-airbnb": "^18.0.1",
     "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-loader": "^3.0.2",
+    "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",

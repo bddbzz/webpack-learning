@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -7,16 +8,16 @@ const HTMLWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 const setMPA = () => {
   const entry = {};
   const htmlWebpackPlugins = [];
-  const entryFiles = glob.sync(path.join(__dirname, './src/*/index.js'));
+  const entryFiles = glob.sync(path.join(__dirname, '../src/pages/*/index.js'));
   entryFiles.forEach((entryFile) => {
-    const match = entryFile.match(/src\/(.*?)\/index\.js$/);
+    const match = entryFile.match(/src\/pages\/(.*?)\/index\.js$/);
     const pageName = match && match[1];
     if (!pageName) {
       return;
     }
     entry[pageName] = entryFile;
     htmlWebpackPlugins.push(new HTMLWebpackPlugin({
-      template: path.resolve(__dirname, `src/${pageName}/index.html`),
+      template: path.resolve(__dirname, `../src/pages/${pageName}/index.html`),
       filename: `${pageName}.html`,
       chunks: [pageName],
       inject: true,
@@ -42,6 +43,8 @@ const {
   htmlWebpackPlugins,
 } = setMPA();
 
+// console.table(entry);
+
 module.exports = {
   entry,
   module: {
@@ -50,6 +53,7 @@ module.exports = {
       use: 'raw-loader',
     }, {
       test: /\.js$/,
+      exclude: /node_modules/,
       use: ['babel-loader', 'eslint-loader'],
     }, {
       test: /\.(png|jpg|gif|jpeg|svg)$/,
@@ -69,6 +73,12 @@ module.exports = {
         },
       }],
     }],
+  },
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, '../src/assets/'),
+    },
+    extensions: ['.js', '.json'],
   },
   plugins: [
     ...htmlWebpackPlugins,

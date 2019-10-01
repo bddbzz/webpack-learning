@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { join } from 'path';
 import { renderFile } from 'ejs';
-import config, { output } from '../webpack.prod.js';
+import config, { output } from './webpack.prod.js';
 
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');

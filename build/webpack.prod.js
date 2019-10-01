@@ -5,11 +5,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpackMerge = require('webpack-merge');
 const path = require('path');
-const baseConfig = require('./webpack.base');
+const baseConfig = require('./webpack.app');
 
 const config = {
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '../dist'),
     filename: '[name]_[chunkhash:8].js',
     publicPath: '',
   },

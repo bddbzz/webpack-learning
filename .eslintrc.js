@@ -1,6 +1,6 @@
 module.exports = {
   parser: "babel-eslint",
-  plugins: [],
+  plugins: ["html"],
   parserOptions: {
     ecmaFeatures: {
       generators: true
@@ -20,10 +20,14 @@ module.exports = {
     "import/extensions": 0
   },
   settings: {
+    "html/html-extensions": [".html", ".we"],
     'import/resolver': {
-      webpack: {
-        config: './webpack.base.js',
+      node: {
+        paths: ["src"]
       },
+      webpack: {
+        config: './build/webpack.app.js',
+      }
     },
   },
 };
