@@ -41,10 +41,19 @@ const config = {
       assetNameRegExp: /\.css$/g,
       cssProcessor: cssnano,
     }),
+    function errorHandler() {
+      this.hooks.done.tap('done', (stats) => {
+        if (stats.compilation.errors && stats.compilation.errors.length) {
+          console.log('build error');
+          process.exit(1);
+        }
+      });
+    },
     // new webpack.optimize.ModuleConcatenationPlugin()
   ],
   mode: 'production',
   devtool: 'source-map',
+  stats: 'errors-only',
   optimization: {
     /* splitChunks: {
             minSize: 0,

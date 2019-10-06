@@ -27,6 +27,7 @@ const config = {
     contentBase: './dist',
     hot: true,
     historyApiFallback: true,
+    stats: 'errors-only',
   },
   /*     watch: true,
     watchOptions: {

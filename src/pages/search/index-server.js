@@ -1,11 +1,10 @@
 /* eslint-disable no-debugger */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.less';
-import logo from 'assets/img/logo.png';
-import add from '@monkeyzz/large-number';
+const React = require('react');
+const logo = require('assets/img/logo.png');
+const add = require('@monkeyzz/large-number');
+require('./index.less');
 
 class Search extends React.Component {
   constructor(...args) {
@@ -27,7 +26,11 @@ class Search extends React.Component {
     const { Text } = this.state;
     const addResult = add('999', '1');
     return (
-      <div onClick={this.handleUpdate.bind(this)} className="search-text" role="presentation">
+      <div
+        onClick={this.handleUpdate.bind(this)}
+        className="search-text"
+        role="presentation"
+      >
         Search Text 22 7777
         {Text ? <Text /> : null}
         {addResult}
@@ -37,5 +40,4 @@ class Search extends React.Component {
   }
 }
 
-ReactDOM.render(<Search />,
-  document.getElementById('root'));
+module.exports = <Search />;
