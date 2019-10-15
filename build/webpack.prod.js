@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpackMerge = require('webpack-merge');
 const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 const baseConfig = require('./webpack.app');
 
 const config = {
@@ -55,6 +56,11 @@ const config = {
   devtool: 'source-map',
   stats: 'errors-only',
   optimization: {
+    minimizer: [
+      new TerserPlugin({
+        parallel: true,
+      }),
+    ],
     /* splitChunks: {
             minSize: 0,
             cacheGroups: {

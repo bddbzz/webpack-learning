@@ -55,7 +55,12 @@ module.exports = {
     }, {
       test: /\.js$/,
       exclude: /node_modules/,
-      use: ['babel-loader', 'eslint-loader'],
+      use: [{
+        loader: 'thread-loader',
+        options: {
+          workers: 5,
+        },
+      }, 'babel-loader', 'eslint-loader'],
     }, {
       test: /\.(png|jpg|gif|jpeg|svg)$/,
       use: [{

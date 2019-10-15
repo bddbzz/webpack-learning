@@ -1,0 +1,268 @@
+ WARNING  Compiled with 1 warnings1:26:29 PM
+
+ warning  
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  assets/SourceHanSansCN-Heavy_07716d02.otf (8.38 MiB)
+
+{
+  "errors": [],
+  "warnings": [
+    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  assets/SourceHanSansCN-Heavy_07716d02.otf (8.38 MiB)"
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "external \"React\"",
+      "name": "external \"React\"",
+      "index": 3,
+      "index2": 2,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+      "issuerId": 4,
+      "issuerName": "./src/pages/search/index.js",
+      "issuerPath": [
+        {
+          "id": 4,
+          "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+          "name": "./src/pages/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 1,
+      "identifier": "external \"ReactDOM\"",
+      "name": "external \"ReactDOM\"",
+      "index": 4,
+      "index2": 3,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+      "issuerId": 4,
+      "issuerName": "./src/pages/search/index.js",
+      "issuerPath": [
+        {
+          "id": 4,
+          "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+          "name": "./src/pages/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 2,
+      "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\url-loader\\dist\\cjs.js??ref--6-0!F:\\bddbzz\\webpack-learning\\src\\assets\\img\\logo.png",
+      "name": "./src/assets/img/logo.png",
+      "index": 8,
+      "index2": 7,
+      "size": 70,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+      "issuerId": 4,
+      "issuerName": "./src/pages/search/index.js",
+      "issuerPath": [
+        {
+          "id": 4,
+          "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+          "name": "./src/pages/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 3,
+      "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\@monkeyzz\\large-number\\index.js",
+      "name": "./node_modules/@monkeyzz/large-number/index.js",
+      "index": 9,
+      "index2": 9,
+      "size": 210,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+      "issuerId": 4,
+      "issuerName": "./src/pages/search/index.js",
+      "issuerPath": [
+        {
+          "id": 4,
+          "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+          "name": "./src/pages/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 4,
+      "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+      "name": "./src/pages/search/index.js",
+      "index": 2,
+      "index2": 10,
+      "size": 3805,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 5,
+      "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!F:\\bddbzz\\webpack-learning\\node_modules\\css-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\node_modules\\less-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\node_modules\\postcss-loader\\src\\index.js??ref--9-3!F:\\bddbzz\\webpack-learning\\node_modules\\px2rem-loader\\index.js??ref--9-4!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.less",
+      "name": "./src/pages/search/index.less",
+      "index": 5,
+      "index2": 6,
+      "size": 39,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+      "issuerId": 4,
+      "issuerName": "./src/pages/search/index.js",
+      "issuerPath": [
+        {
+          "id": 4,
+          "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+          "name": "./src/pages/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 6,
+      "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\@monkeyzz\\large-number\\dist\\large-number.min.js",
+      "name": "./node_modules/@monkeyzz/large-number/dist/large-number.min.js",
+      "index": 10,
+      "index2": 8,
+      "size": 1430,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "F:\\bddbzz\\webpack-learning\\node_modules\\@monkeyzz\\large-number\\index.js",
+      "issuerId": 3,
+      "issuerName": "./node_modules/@monkeyzz/large-number/index.js",
+      "issuerPath": [
+        {
+          "id": 4,
+          "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+          "name": "./src/pages/search/index.js"
+        },
+        {
+          "id": 3,
+          "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\@monkeyzz\\large-number\\index.js",
+          "name": "./node_modules/@monkeyzz/large-number/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 7,
+      "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\index\\index.js e688a328c807c0745b83ba4ebd04b6eb",
+      "name": "./src/pages/index/index.js + 1 modules",
+      "index": 0,
+      "index2": 1,
+      "size": 131,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 8,
+      "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\func.js",
+      "name": "./src/pages/search/func.js",
+      "index": 11,
+      "index2": 11,
+      "size": 129,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "issuer": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+      "issuerId": 4,
+      "issuerName": "./src/pages/search/index.js",
+      "issuerPath": [
+        {
+          "id": 4,
+          "identifier": "F:\\bddbzz\\webpack-learning\\node_modules\\babel-loader\\lib\\index.js!F:\\bddbzz\\webpack-learning\\node_modules\\eslint-loader\\dist\\cjs.js!F:\\bddbzz\\webpack-learning\\src\\pages\\search\\index.js",
+          "name": "./src/pages/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "filteredModules": 2,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  }
+}

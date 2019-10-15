@@ -10,7 +10,9 @@
     "dev": "webpack-dev-server --open --config build/webpack.dev.js",
     "lib": "webpack --config build/webpack.lib.js",
     "ssr": "webpack --config build/webpack.ssr.js",
-    "lint": "eslint --ext .js --ext .jsx src"
+    "lint": "eslint --ext .js --ext .jsx src",
+    "stats": "webpack --config build/webpack.prod.js --json > stats.json",
+    "analyzer": "webpack --config build/webpack.analyzer.js"
   },
   "husky": {
     "hooks": {
@@ -79,9 +81,12 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "rimraf": "^3.0.0",
+    "speed-measure-webpack-plugin": "^1.3.1",
     "style-loader": "^1.0.0",
+    "thread-loader": "^2.1.3",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.3",
+    "webpack-bundle-analyzer": "^3.5.2",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0",
     "webpack-hot-middleware": "^2.25.0",
